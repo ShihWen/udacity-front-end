@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+}
+
 /*================= header =====================*/
 
 header.site-home-header {
@@ -83,21 +87,56 @@ main {
     background-size: cover;
 }
 
-
 .post-card-large {
     flex: 1 1 100%;
     flex-direction: row;
+    padding-bottom: 40px;
+    min-height: 280px;
 }
-
 
 .post-feed {
     flex-wrap: wrap;
     padding: 40px 0 5vw;
 }
 
-
 article.post-card {
     border: 2px solid green;
+}
+
+.post-card-image-link {
+    height: 200px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 3px;   
+}
+
+.post-card-image {
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.post-card-excerpt p {
+    color: rgb(96, 96, 96);
+    line-height: 1.5em;    
+}
+
+.post-card-large .post-card-image-link {
+    position: relative;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    min-height: 380px;
+}
+
+.post-card-large .post-card-content {
+    flex: 0 1 361px;
+    justify-content: center;
+}
+
+.post-card-large .post-card-content-link,
+.post-card-large .post-card-meta {
+    padding: 0 0 0  40px;
 }
 
 
