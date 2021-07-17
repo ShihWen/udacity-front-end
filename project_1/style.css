@@ -9,9 +9,7 @@ body {
     margin: 0;
 }
 
-main {
-    padding: 0 5%;
-}
+/*================= header =====================*/
 
 header.site-home-header {
     display: block;
@@ -23,7 +21,6 @@ header.site-home-header {
     z-index: 1000;
 
 }
-
 
 nav.site-nav {
     width: 100%;
@@ -48,9 +45,6 @@ ul.nav {
     list-style-type: none;
 }
 
-
-
-
 div.site-header-content {
     display: flex;
     flex-direction: column;
@@ -64,17 +58,50 @@ h2.site-description {
     font-size: 18px;
 }
 
-
-
+/*================= main =====================*/
 
 main {
     border: 3px solid blue;
+    position: relative;
+    padding: 0 7%;
+    display: block;
 }
+
+.post-card, .post-feed{
+    position: relative;
+    display: flex;
+}
+
+.post-card {
+    flex: 1 1 301px;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 0 40px;
+    padding: 0 20px 40px;
+    min-height: 220px;
+    border-bottom: 1px solid #eaeff1;
+    background-size: cover;
+}
+
+
+.post-card-large {
+    flex: 1 1 100%;
+    flex-direction: row;
+}
+
+
+.post-feed {
+    flex-wrap: wrap;
+    padding: 40px 0 5vw;
+}
+
 
 article.post-card {
     border: 2px solid green;
 }
 
+
+/*================= footer =====================*/
 
 footer.site-footer {
     border: 3px solid blue;
