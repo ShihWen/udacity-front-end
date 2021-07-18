@@ -1,6 +1,6 @@
-@import "header.css";
-@import "main.css";
-@import "footer.css";
+@import "style_header.css";
+@import "style_main.css";
+@import "style_footer.css";
 
 * {
     font-family: Helvetica, Arial, sans-serif;

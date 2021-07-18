@@ -21,12 +21,20 @@ main {
     background-size: cover;
 }
 
-.post-card-large {
-    flex: 1 1 100%;
-    flex-direction: row;
-    padding-bottom: 40px;
-    min-height: 280px;
-    border-top: 0;
+@media only screen and (min-width: 722px){
+    .post-card-large {
+        flex: 1 1 100%;
+        flex-direction: row;
+        padding-bottom: 40px;
+        min-height: 280px;
+        border-top: 0;
+    }  
+
+    .post-card-large .post-card-content {
+        flex: 0 1 361px;
+        justify-content: center;
+    }
+
 }
 
 .post-feed {
@@ -76,10 +84,7 @@ article.post-card {
     align-items: flex-start;
 }
 
-.post-card-large .post-card-content {
-    flex: 0 1 361px;
-    justify-content: center;
-}
+
 
 .post-card-large .post-card-content-link,
 .post-card-large .post-card-meta {

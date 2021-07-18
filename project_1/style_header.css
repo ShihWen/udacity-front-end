@@ -23,13 +23,13 @@ div.outer.site-nav-main {
     z-index: 100;
 }
 
-
 ul.nav {
     width: 40%;
     border: 1px solid goldenrod;
     display: flex;
     justify-content: space-between;
-    /*list-style-type: none;*/
+    max-width: 470px;
+    width: 100%;
 }
 
 div.site-header-content {
