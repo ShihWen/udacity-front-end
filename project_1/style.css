@@ -1,8 +1,13 @@
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+
 * {
     font-family: Helvetica, Arial, sans-serif;
     opacity: 1;
     box-sizing: border-box;
     z-index: 100;
+    list-style-type: none;
   }
 
 body {
@@ -15,6 +20,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /*================= header =====================*/
 
+/*
 header.site-home-header {
     display: block;
     position: relative;
@@ -46,7 +52,7 @@ ul.nav {
     border: 1px solid goldenrod;
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
+
 }
 
 div.site-header-content {
@@ -62,8 +68,17 @@ h2.site-description {
     font-size: 18px;
 }
 
-/*================= main =====================*/
+.static-avatar {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 -6px;
+    width: 34px;
+    height: 34px;
+}
 
+*/
+/*================= main =====================*/
+/*
 main {
     border: 3px solid blue;
     position: relative;
@@ -92,6 +107,7 @@ main {
     flex-direction: row;
     padding-bottom: 40px;
     min-height: 280px;
+    border-top: 0;
 }
 
 .post-feed {
@@ -105,6 +121,7 @@ article.post-card {
 
 .post-card-image-link {
     height: 200px;
+    max-width: 680px;
     position: relative;
     display: block;
     overflow: hidden;
@@ -129,6 +146,17 @@ article.post-card {
     min-height: 380px;
 }
 
+.post-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-meta {
+    display: flex;
+    align-items: flex-start;
+}
+
 .post-card-large .post-card-content {
     flex: 0 1 361px;
     justify-content: center;
@@ -139,13 +167,19 @@ article.post-card {
     padding: 0 0 0  40px;
 }
 
-
+*/
 /*================= footer =====================*/
 
+/*
 footer.site-footer {
     border: 3px solid blue;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px;
 }
 
 section.copyright, nav.site-footer {
     border: 2px solid green;
 }
+
+*/

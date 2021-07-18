@@ -1,0 +1,54 @@
+header.site-home-header {
+    display: block;
+    position: relative;
+    align-items: center;
+    border: 3px solid blue;
+    background-color: lightblue;
+    height: 18em;
+    z-index: 1000;
+
+}
+
+nav.site-nav {
+    width: 100%;
+    border: 2px solid green;
+}
+
+div.outer.site-nav-main {
+    width: 100%;
+    background-color: lightgreen;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+
+ul.nav {
+    width: 40%;
+    border: 1px solid goldenrod;
+    display: flex;
+    justify-content: space-between;
+    /*list-style-type: none;*/
+}
+
+div.site-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+    margin: 10vh 0;
+
+}
+
+h2.site-description {
+    font-size: 18px;
+}
+
+.static-avatar {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 -6px;
+    width: 34px;
+    height: 34px;
+}
