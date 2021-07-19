@@ -1,0 +1,35 @@
+
+
+div.outer, main, footer {
+    border: 3px solid blue;
+}
+
+header, figure.post-fill-image,  section, nav.site-footer {
+    border: 2px solid green;
+}
+
+p, figure.sample-image {
+    border: 2px solid maroon;
+}
+
+
+
+ul.nav {
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    align-items: center;
+    list-style-type: none;
+}
+
+
+div.site-footer-content {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+    align-items: center;
+    list-style-type: none;
+
+}
+
