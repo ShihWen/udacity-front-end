@@ -8,7 +8,7 @@ header, figure.post-fill-image,  section, nav.site-footer {
     border: 2px solid green;
 }
 
-p, figure.sample-image {
+p, figure.sample-image-large, figure.sample-image-medium{
     border: 1px solid maroon;
 }
 
@@ -28,7 +28,7 @@ ul.nav {
 article.post-full {
     display: grid;
     grid-template-columns: 10vw 7vw 8vw 1fr 8vw 7vw 10vw;
-    grid-template-rows: 10vh 55vh 1fr
+    grid-template-rows: 10vh 65vh 1fr
 
 }
 
@@ -39,18 +39,46 @@ article.post-full header {
 article.post-full figure.post-fill-image {
     grid-column: 1 / span 7;
     margin: 1.5em 0em;
+    display: flex;
+    justify-content: center;
 }
 
 section.post-full-content {
+    grid-column: 1 / span 7;
+    display: grid;
+    grid-template-columns: 10vw 7vw 8vw 1fr 8vw 7vw 10vw;
+    
+}
+
+section.post-full-content p {
     grid-column: 2 / span 5;
 }
+
+section.post-full-content figure.sample-image-large {
+    grid-column: 1 / span 7;
+    margin: 1.5em 0em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.post-full-content figure.sample-image-medium {
+    grid-column: 2 / span 5;
+    margin: 1.5em 0em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 
 section.post-full-content figure.sample-image {
     margin: 1.5em 0em;
 }
-
-
-
 
 div.site-footer-content {
     display: grid;
