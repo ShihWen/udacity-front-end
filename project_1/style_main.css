@@ -21,7 +21,7 @@ main {
     background-size: cover;
 }
 
-@media only screen and (min-width: 722px){
+@media only screen and (min-width: 900px){
     .post-card-large {
         flex: 1 1 100%;
         flex-direction: row;
@@ -33,6 +33,13 @@ main {
     .post-card-large .post-card-content {
         flex: 0 1 361px;
         justify-content: center;
+    }
+
+    .post-card-large .post-card-image-link {
+        position: relative;
+        flex: 1 1 auto;
+        margin-bottom: 0;
+        min-height: 380px;
     }
 
 }
@@ -50,7 +57,6 @@ article.post-card {
     height: 200px;
     max-width: 680px;
     position: relative;
-    display: block;
     overflow: hidden;
     border-radius: 3px;   
 }
@@ -66,12 +72,7 @@ article.post-card {
     line-height: 1.5em;    
 }
 
-.post-card-large .post-card-image-link {
-    position: relative;
-    flex: 1 1 auto;
-    margin-bottom: 0;
-    min-height: 380px;
-}
+
 
 .post-card-content {
     flex-grow: 1;
