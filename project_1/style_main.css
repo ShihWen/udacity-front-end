@@ -25,6 +25,7 @@ main {
     .post-card-large {
         flex: 1 1 100%;
         flex-direction: row;
+        justify-content: center;
         padding-bottom: 40px;
         min-height: 280px;
         border-top: 0;
@@ -54,7 +55,7 @@ article.post-card {
 }
 
 .post-card-image-link {
-    height: 200px;
+    /*height: 200px;*/
     max-width: 680px;
     position: relative;
     overflow: hidden;
