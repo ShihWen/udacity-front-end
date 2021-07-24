@@ -14,8 +14,9 @@ body {
     margin: 0;
 }
 
-a, a:hover, a:active, a:visited, a:focus {
+ul a, ul a:hover, ul a:active, ul a:visited, ul a:focus {
     text-decoration: none;
+    color: wheat;
 }
 
 /*================= header =====================*/

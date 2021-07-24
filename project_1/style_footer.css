@@ -1,10 +1,17 @@
 footer.site-footer {
-    border: 3px solid blue;
+    /*border: 3px solid blue;*/
     font-size: 0.9em;
     text-align: center;
     padding: 10px;
+    background-color: rgb(29, 32, 32);
+    color: wheat;
 }
 
+/*
 section.copyright, nav.site-footer {
     border: 2px solid green;
+}
+*/
+section.copyright h3, nav.site-footer a {
+    color:wheat;
 }

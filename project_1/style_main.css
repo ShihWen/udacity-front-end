@@ -1,5 +1,5 @@
 main {
-    border: 3px solid blue;
+    /*border: 3px solid blue;*/
     position: relative;
     padding: 0 7%;
     display: block;
@@ -17,7 +17,7 @@ main {
     margin: 0 0 40px;
     padding: 0 20px 40px;
     min-height: 220px;
-    border-bottom: 1px solid #eaeff1;
+    /*border-bottom: 1px solid #eaeff1;*/
     background-size: cover;
 }
 
@@ -49,10 +49,11 @@ main {
     flex-wrap: wrap;
     padding: 40px 0 5vw;
 }
-
+/*
 article.post-card {
     border: 2px solid green;
 }
+*/
 
 .post-card-image-link {
     /*height: 200px;*/
