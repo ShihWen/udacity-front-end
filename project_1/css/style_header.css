@@ -28,9 +28,14 @@ ul.nav {
     /*border: 1px solid goldenrod;*/
     color: wheat;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 470px;
     width: 100%;
+}
+
+ul.nav li {
+    padding: 4px;
 }
 
 div.site-header-content {
