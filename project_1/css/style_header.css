@@ -42,14 +42,20 @@ div.site-header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*border: 1px solid green;*/
-    margin: 10vh 0;
-
 }
+
+@media only screen and (min-width: 450px){
+    div.site-header-content {
+        margin: 10vh 0;
+    }
+}
+
 
 h1.site-title, h2.site-description {
     color: whitesmoke;
 }
+
+
 
 h2.site-description {
     font-size: 18px;
