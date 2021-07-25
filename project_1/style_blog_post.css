@@ -7,10 +7,6 @@ body {
     margin: 0px;
 }
 
-p {
-    font-size: 1.15em;
-}
-
 div.outer {
     padding: 10px;
     margin: 0;
@@ -91,8 +87,22 @@ section.post-full-content {
     
 }
 
-section.post-full-content p {
+section.post-full-content p,
+section.post-full-content blockquote {
     grid-column: 3 / span 3;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+section.post-full-content blockquote {
+    font-size: 2em;
+}
+
+section.post-full-content blockquote p {
+    text-align: right;
+    font-size: 0.5em;
 }
 
 
