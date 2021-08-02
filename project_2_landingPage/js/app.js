@@ -34,8 +34,8 @@ const headerEl = document.querySelector("header.page__header");
 */
 
 // build the nav
-function buildMenu(){
-    for (let section of sectionList){
+function buildMenu() {
+    for (let section of sectionList) {
         let element = document.createElement('li');
         element.textContent = section.getAttribute("data-nav");
         element.classList.add("menu__link");
@@ -45,18 +45,18 @@ function buildMenu(){
 }
 
 // Add class 'active' to section when near top of viewport
-function setActive(){
-    document.addEventListener('scroll', function(){
+function setActive() {
+    document.addEventListener('scroll', function () {
         sectionList[0].classList.remove("active")
         const sectionHeight = sectionList[0].offsetHeight;
 
-        for (i=0;i<sectionList.length;i++){
-            
-            if (window.scrollY >= headerEl.offsetHeight+(sectionHeight*i) &&
-                window.scrollY < headerEl.offsetHeight+(sectionHeight*(i+1))
-                ){
-                    sectionList[i].classList.add('your-active-class');
-                    navbarList.children[i].classList.add('active');
+        for (i = 0; i < sectionList.length; i++) {
+
+            if (window.scrollY >= headerEl.offsetHeight + (sectionHeight * i) &&
+                window.scrollY < headerEl.offsetHeight + (sectionHeight * (i + 1))
+            ) {
+                sectionList[i].classList.add('your-active-class');
+                navbarList.children[i].classList.add('active');
             }
             else {
                 sectionList[i].classList.remove('your-active-class');
@@ -64,39 +64,26 @@ function setActive(){
             }
 
         }
-        /*
-        if (window.scrollY < 
-            headerEl.offsetHeight+(sectionHeight*1)
-            ) {
-                sectionList[0].classList.add('your-active-class')
-                console.log("section 1 added!")
-                console.log(`scrollY: ${window.scrollY}`)
-            }
-        else if (window.scrollY >= headerEl.offsetHeight+(sectionHeight*1) &&
-                 window.scrollY < headerEl.offsetHeight+(sectionHeight*2)
-        
-            ) {
-                sectionList[0].classList.remove('your-active-class')
-                sectionList[1].classList.add('your-active-class')
-                console.log("section 2 added!")
-                console.log(`scrollY: ${window.scrollY}`)
-            }
-        else if (window.scrollY >= headerEl.offsetHeight+(sectionHeight*2) &&
-                 window.scrollY < headerEl.offsetHeight+(sectionHeight*3)
-   
-            ) {
-                sectionList[1].classList.remove('your-active-class')
-                sectionList[2].classList.add('your-active-class')
-                console.log("section 3 added!")
-                console.log(`scrollY: ${window.scrollY}`)
-            }
-        */
+
     })
-    
+
 }
 
 // Scroll to anchor ID using scrollTO event
+function scrollToSection() {
+    for (i = 0; i < navbarList.childElementCount; i++) {
+        //console.log(sectionList[i].offsetTop);
 
+        navbarList.children[i].addEventListener("click", function () {
+            window.scrollTo({
+                top: headerEl.offsetHeight,//sectionList[i].offsetTop,
+                behavior: "smooth",
+            });
+        })
+        console.log(100*(i));
+
+    }
+};
 
 /**
  * End Main Functions
@@ -106,26 +93,16 @@ function setActive(){
 
 // Build menu 
 buildMenu();
-/*
-document.addEventListener('scroll', function(){
-    console.log(`Window scroll Y is: ${window.scrollY}`);
-    console.log(`Document.body.offsetHeight: ${document.body.offsetHeight}`);
-    console.log(`Window.innerHeight: ${window.innerHeight}`);
-})
-
-console.log(`offsetHeight of header: ${headerEl.offsetHeight}`);
-
-
-for (let el of sectionList){
-    let elParent = el.parentElement
-    console.log(`Parent Element: ${elParent}`);
-    console.log(`offsetHeight of ${elParent.id} is: ${elParent.offsetHeight}`)
-    console.log(`innerHeight of ${elParent.id} is: ${elParent.innerHeight}`)
-}
-*/
 
 // Scroll to section on link click
+scrollToSection();
 
 // Set sections as active
-setActive()
+setActive();
+
+document.addEventListener("scroll", function(){
+    console.log(`ScrollY: ${window.scrollY}`);
+})
+
+
 
