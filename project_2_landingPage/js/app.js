@@ -71,18 +71,40 @@ function setActive() {
 
 // Scroll to anchor ID using scrollTO event
 function scrollToSection() {
+    
     for (i = 0; i < navbarList.childElementCount; i++) {
-        //console.log(sectionList[i].offsetTop);
-
-        navbarList.children[i].addEventListener("click", function () {
+        console.log(i);
+        navbarList.children[i].addEventListener("click", function (e) {
             window.scrollTo({
-                top: headerEl.offsetHeight,//sectionList[i].offsetTop,
+                top: sectionList[i].offsetTop,
                 behavior: "smooth",
             });
         })
-        console.log(100*(i));
-
     }
+    
+    /*
+    navbarList.children[0].addEventListener("click", function () {
+        window.scrollTo({
+            top: sectionList[0].offsetTop,
+            behavior: "smooth",
+        });
+    })
+    
+    navbarList.children[1].addEventListener("click", function () {
+        window.scrollTo({
+            top: sectionList[1].offsetTop,
+            behavior: "smooth",
+        });
+    })
+    
+    navbarList.children[2].addEventListener("click", function () {
+        window.scrollTo({
+            top: sectionList[2].offsetTop,
+            behavior: "smooth",
+        });
+    })
+    */
+    
 };
 
 /**
@@ -95,14 +117,18 @@ function scrollToSection() {
 buildMenu();
 
 // Scroll to section on link click
+
+
 scrollToSection();
+
 
 // Set sections as active
 setActive();
-
+/*
 document.addEventListener("scroll", function(){
     console.log(`ScrollY: ${window.scrollY}`);
 })
+*/
 
 
 
