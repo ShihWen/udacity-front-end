@@ -25,6 +25,14 @@ const headerEl = document.querySelector("header.page__header");
  * 
 */
 
+/*  Nav-bar click  */
+function respondeToClick(e){
+    sectionLoc = sectionList[e.target.getAttribute('id')-1];
+    window.scrollTo({
+        top: sectionLoc.offsetTop,
+        behavior: "smooth",
+    })
+}
 
 
 /**
@@ -39,6 +47,10 @@ function buildMenu() {
         let element = document.createElement('li');
         element.textContent = section.getAttribute("data-nav");
         element.classList.add("menu__link");
+        
+        let section_cnt = section.getAttribute("data-nav").split(' ')[1]
+        element.setAttribute('id',section_cnt);
+
         navbarList.appendChild(element);
         navbarList.firstElementChild.classList.add("active");
     }
@@ -62,7 +74,6 @@ function setActive() {
                 sectionList[i].classList.remove('your-active-class');
                 navbarList.children[i].classList.remove('active');
             }
-
         }
 
     })
@@ -71,40 +82,7 @@ function setActive() {
 
 // Scroll to anchor ID using scrollTO event
 function scrollToSection() {
-    
-    for (i = 0; i < navbarList.childElementCount; i++) {
-        console.log(i);
-        navbarList.children[i].addEventListener("click", function (e) {
-            window.scrollTo({
-                top: sectionList[i].offsetTop,
-                behavior: "smooth",
-            });
-        })
-    }
-    
-    /*
-    navbarList.children[0].addEventListener("click", function () {
-        window.scrollTo({
-            top: sectionList[0].offsetTop,
-            behavior: "smooth",
-        });
-    })
-    
-    navbarList.children[1].addEventListener("click", function () {
-        window.scrollTo({
-            top: sectionList[1].offsetTop,
-            behavior: "smooth",
-        });
-    })
-    
-    navbarList.children[2].addEventListener("click", function () {
-        window.scrollTo({
-            top: sectionList[2].offsetTop,
-            behavior: "smooth",
-        });
-    })
-    */
-    
+    navbarList.addEventListener("click", respondeToClick); 
 };
 
 /**
@@ -117,8 +95,6 @@ function scrollToSection() {
 buildMenu();
 
 // Scroll to section on link click
-
-
 scrollToSection();
 
 
