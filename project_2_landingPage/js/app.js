@@ -19,6 +19,7 @@
 const sectionList = document.querySelectorAll("section");
 const navbarList = document.querySelector("#navbar__list");
 const headerEl = document.querySelector("header.page__header");
+const menuButton = document.querySelector("bar-parent");
 /**
  * End Global Variables
  * Start Helper Functions
@@ -26,13 +27,16 @@ const headerEl = document.querySelector("header.page__header");
 */
 
 /*  Nav-bar click  */
-function respondeToClick(e){
+function respondToClick(e){
     sectionLoc = sectionList[e.target.getAttribute('id')-1];
     window.scrollTo({
         top: sectionLoc.offsetTop,
         behavior: "smooth",
     })
 }
+
+/* Nav-bar menu click */
+
 
 
 /**
@@ -82,8 +86,28 @@ function setActive() {
 
 // Scroll to anchor ID using scrollTO event
 function scrollToSection() {
-    navbarList.addEventListener("click", respondeToClick); 
+    navbarList.addEventListener("click", respondToClick); 
 };
+
+
+// Menu function
+function clickMenu(){
+    document.addEventListener('click', function(){
+        const navbarItem = document.querySelectorAll(".navbar__menu .menu__link");
+        //console.log(navbarItem[0].style.display);
+        if(navbarItem[0].style.display === "" && window.innerWidth < 701){
+            for (i=0;i<navbarItem.length;i++){
+                navbarItem[i].style.display = "block"
+                //console.log(navbarItem[i].style);
+            }
+        } else if (navbarItem[0].style.display === "block" && window.innerWidth < 701) {
+            for (i=0;i<navbarItem.length;i++){
+                navbarItem[i].style.display = ""
+                //console.log(navbarItem[i].style);
+            }
+        }
+    })
+}
 
 /**
  * End Main Functions
@@ -105,6 +129,7 @@ document.addEventListener("scroll", function(){
     console.log(`ScrollY: ${window.scrollY}`);
 })
 */
+clickMenu();
 
 
 

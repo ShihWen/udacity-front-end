@@ -18,3 +18,4 @@ For specific, detailed instructions, look at the project instructions in the Uda
 - Add hover effect for each button in nav-bar
 - Scroll to the correspondent section while the button is clicked
 - Active section effect based on scrollY
+- Add section 4

@@ -74,16 +74,52 @@ section {
     display: inline-block;
 }
 
-.navbar__menu .menu__link {
-    /*display: block;*/
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+
+
+.bar-parent {
+    display: none;
+    text-align: right;
+    color: black;
+    padding: 20px;
 }
 
+
+
+@media screen and (min-width: 701px) {
+    .navbar__menu .menu__link {
+        display: inline-block;
+        padding: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .bar-parent {
+        display: block;
+        text-align: right;
+        color: black;
+        padding: 20px;
+    }
+    
+    .navbar__menu .menu__link {
+        display: none;
+        padding: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+    
+
+}
+
+
+
 .navbar__menu .menu__link.active:hover,
-.navbar__menu .menu__link:hover {
+.navbar__menu .menu__link:hover,
+.bar-parent:hover {
     color: gray;
     transition: ease 0.3s all;
     cursor: pointer;
